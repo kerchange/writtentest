@@ -22,7 +22,7 @@ public class Test2 {
 		Map<String, String> dict = dictionaryFunc();
 		
 		//question 2 regex
-		boolean x = regexChecking("4234123412341234");
+		boolean x = regexChecking("423412341234-1244");
 		System.out.println("\nQuestion 2: ");
 		if(x) {
 			System.out.println("Valid Card Num.");
@@ -114,24 +114,22 @@ public class Test2 {
     	Matcher m = p.matcher(str);
     	boolean b = m.matches();
     	
-    	return b;
-    	/*
+   
+    	
     	if(b) {
     		str = str.replaceAll("-", "");
-    		String[] strSplit = str.split(" ");
+    		String[] strSplit = str.split("");
     		
     		int[] arr = new int[str.length()];
     		
-    		Integer temp1 = 0 , temp2 = 0;
+    		Integer temp1 = 0 ;
     		
-    		System.out.println(strSplit.length);
-    		
-    		for(int i = 0 ; i < strSplit.length -1; i++) {
+    		for(int i = 0 ; i < strSplit.length; i++) {
     			arr[i] = Integer.parseInt(strSplit[i]);
-    		}
+       		}
     		
-    		for(Integer i = 0 ; i < arr.length ; i++) {
-    			if(i!=arr.length) {
+    		for(int i = 0 ; i < arr.length ; i++) {
+    			if(i!=arr.length-1) {
     				if(arr[i] == arr[i+1]) {
         				temp1++;
         				if(temp1 == 3) {
@@ -146,7 +144,7 @@ public class Test2 {
     		return b;
     	}else {
     		return b;
-    	}*/
+    	}
     }
     
     //Q3
